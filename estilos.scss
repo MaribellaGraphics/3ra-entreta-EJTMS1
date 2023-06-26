@@ -1,0 +1,99 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootstrap";
+@import "animate";
+
+// Variables de colores
+$color-primario: #304554;
+$color-secundario: #FFBF00;
+$color-blanco: #ffffff;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+.img-area{
+    width: 200px;
+    height: 200px;
+
+
+
+       img{
+        object-fit: cover;
+        object-position: center;
+       }
+}
+
+.navbar-toggler{
+    color: white;
+
+
+    span.navbar-toggler-icon{
+        color: white;
+    }
+}
+
+/*Equipos*/
+
+// Estilos del contenedor de las cards
+.card-container {
+  height: 400px;  // Ajusta la altura máxima según tus necesidades
+  overflow-y: auto;
+}
+
+// Estilos de las cards
+.card {
+  border-radius: 20px;
+  border: 1px solid $color-primario;
+  background-color: $color-blanco;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Estilos de las imágenes
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+// Estilos del texto en las cards
+.card-title {
+  color: $color-primario;
+  font-weight: bold;
+}
+
+
+.especialidades-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// Animación al hacer clic en las cards
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate__pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
