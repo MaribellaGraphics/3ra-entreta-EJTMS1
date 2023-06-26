@@ -2,7 +2,7 @@
 @import "bootstrap";
 @import "animate";
 
-// Variables de colores
+/*VARIABLES*/
 $color-primario: #304554;
 $color-secundario: #FFBF00;
 $color-blanco: #ffffff;
@@ -13,11 +13,10 @@ $color-blanco: #ffffff;
 }
 
 /*HEADER*/
+
 .img-area{
     width: 200px;
     height: 200px;
-
-
 
        img{
         object-fit: cover;
@@ -34,15 +33,18 @@ $color-blanco: #ffffff;
     }
 }
 
-/*Equipos*/
 
-// Estilos del contenedor de las cards
+
+
+/*EQUIPOS*/
+
+
 .card-container {
-  height: 400px;  // Ajusta la altura máxima según tus necesidades
+  height: 400px;
   overflow-y: auto;
 }
 
-// Estilos de las cards
+
 .card {
   border-radius: 20px;
   border: 1px solid $color-primario;
@@ -56,7 +58,7 @@ $color-blanco: #ffffff;
   }
 }
 
-// Estilos de las imágenes
+
 .card-img-top {
   width: 150px;
   height: 150px;
@@ -67,7 +69,7 @@ $color-blanco: #ffffff;
   border-radius: 50%;
 }
 
-// Estilos del texto en las cards
+
 .card-title {
   color: $color-primario;
   font-weight: bold;
@@ -79,7 +81,7 @@ $color-blanco: #ffffff;
   padding-bottom: 10px;
 }
 
-// Animación al hacer clic en las cards
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -97,3 +99,93 @@ $color-blanco: #ffffff;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
+
+
+/*CONTACTO*/
+
+@mixin tipoFormulario {
+  .form-check {
+    margin-bottom: 10px;
+  }
+}
+.container {
+  .row {
+    .col-md-6 {
+      form {
+        margin-bottom: 20px;
+        .form-group {
+          label {
+            font-weight: bold;
+          }
+          input[type="text"],
+          input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+          }
+        }
+        @include tipoFormulario;
+        .btn-primary {
+          display: block;
+          width: 100%;
+        }
+      }
+      #mapa {
+        width: 100%;
+        height: 400px;
+        background-color: #f1f1f1;
+      }
+      .direccion {
+        padding: 20px;
+        background-color: #f9f9f9;
+        h4 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin-bottom: 5px;
+      }
+     }
+    }
+   }
+  }
+
+  /*SERVICIOS*/
+// Definir variables
+$color-primario: #304554;
+$color-secundario: #FFBF00;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  
+  .accordion-button {
+    background-color: $color-primario;
+    color: #fff;
+    
+    &:hover {
+      background-color: $color-secundario;
+    }
+  }
+  
+  .accordion-collapse {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
