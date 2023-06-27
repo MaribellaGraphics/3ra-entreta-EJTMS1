@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "animate";
 
+
 /*VARIABLES*/
 $color-primario: #304554;
 $color-secundario: #FFBF00;
@@ -44,7 +45,7 @@ $color-blanco: #ffffff;
 
 
 .card {
-  border-radius: 20px;
+  border-radius: 19px;
   border: 1px solid $color-primario;
   background-color: $color-blanco;
   height: auto;
@@ -58,8 +59,8 @@ $color-blanco: #ffffff;
 
 
 .card-img-top {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   
 }
 
@@ -151,6 +152,7 @@ $color-blanco: #ffffff;
   }
 
   /*SERVICIOS*/
+
 // Definir variables
 $color-primario: #304554;
 $color-secundario: #FFBF00;
@@ -180,10 +182,73 @@ $color-secundario: #FFBF00;
   }
 }
 
-// Media queries
-@media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
+
+/*FOOTER*/
+
+
+
+
+
+/*BLOG*/
+.search-section {
+  margin-bottom: 20px;
+
+  .filter {
+    label {
+      margin-right: 5px;
+    }
+
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 800px;
+      margin-right: 5px;
+    }
+
+    button {
+      /* Estilos del botón de búsqueda */
+    }
+  }
+
+  .justify-content-between {
+    justify-content: space-between;
   }
 }
 
+
+  
+
+// Media queries
+
+
+/*variables media query*/
+$desktop: (max-width: 1024px);
+$tablet: (max-width: 720px);
+$phone: (max-width: 480px);
+  
+
+@media screen and #{$desktop} {}
+@media screen and #{$tablet} {}
+@media screen and #{$phone} {}
+
+@mixin desktop {
+  @media screen and #{$desktop} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and #{$tablet} {
+    @content;
+  }
+}
+
+@mixin telefono {
+  @media screen and #{$phone} {
+    @content;
+  }
+}
