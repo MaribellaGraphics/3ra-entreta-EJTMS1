@@ -187,8 +187,6 @@ $color-secundario: #FFBF00;
 
 
 
-
-
 /*BLOG*/
 
 
@@ -203,9 +201,6 @@ $tablet: (max-width: 720px);
 $phone: (max-width: 480px);
   
 
-@media screen and #{$desktop} {}
-@media screen and #{$tablet} {}
-@media screen and #{$phone} {}
 
 @mixin desktop {
   @media screen and #{$desktop} {
